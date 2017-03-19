@@ -90,4 +90,4 @@ names(merged_data_all)<-gsub("BodyBody", "Body", names(merged_data_all))
 library(plyr);
 Datasub<-aggregate(. ~Subject + Activity,merged_data_all, mean)
 Datasub<-Datasub[order(Datasub$Subject,Datasub$Activity),]
-write.table(Datasub, file = "Datasub.txt",row.name=FALSE)
+write.table(Datasub, file = "tidydata.txt",row.name=FALSE)
