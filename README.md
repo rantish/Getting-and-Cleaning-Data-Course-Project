@@ -1,6 +1,6 @@
 You should create one R script called run_analysis.R that does the following.
 
-1. Merges the training and the test sets to create one data set.
+1.Merges the training and the test sets to create one data set.
 
 The files that were used to load data are listed as follows:
 
@@ -16,9 +16,10 @@ values of Varible Subject consist of data from “subject_train.txt” and subje
 Values of Varibles Features consist of data from “X_train.txt” and “X_test.txt”
 Names of Varibles Features come from “features.txt”
 levels of Varible Activity come from “activity_labels.txt”
+
 =====================================================================================================================
 =====================================================================================================================
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+2.Extracts only the measurements on the mean and standard deviation for each measurement.
 
 After Merging all datsets the script uses  wild card pattern matching to search for mean and sd variables by 
 joining with the features dataset :-
@@ -28,12 +29,12 @@ FeaturesNames<-Features_Names$V2[grep("mean\\(\\)|std\\(\\)", Features_Names$V2)
 Subsetting is then done and relevant rows retained
 =====================================================================================================================
 =====================================================================================================================
-3. Uses descriptive activity names to name the activities in the data set
+3.Uses descriptive activity names to name the activities in the data set
 
 Here I have utilised activity_labels.txt to assign activity levels  to my final dataset onbtained from Step 2 above.
 =====================================================================================================================
 =====================================================================================================================
-3. Appropriately labels the data set with descriptive variable names.
+4.Appropriately labels the data set with descriptive variable names.
 
 #- prefix t  is replaced by  time
 #- Acc is replaced by Accelerometer
@@ -44,7 +45,7 @@ Here I have utilised activity_labels.txt to assign activity levels  to my final 
 
 =====================================================================================================================
 =====================================================================================================================
-4.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 UPLOADED the dataset to the repo.
 =====================================================================================================================
